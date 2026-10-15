@@ -1,0 +1,41 @@
+name: Офлайн-версия для друга
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "dist/**"
+      - "scripts/build-offline.cjs"
+      - "tests/offline-build.cjs"
+      - ".github/workflows/offline-friend.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  offline-html:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Проверка целостности игры
+        run: |
+          npm test
+          npm run audit
+      - name: Собрать один HTML-файл с иллюстрациями
+        run: node scripts/build-offline.cjs offline/pepel-zemli-offline.html
+      - name: Убедиться, что файл включает всю игру и все иллюстрации
+        run: node tests/offline-build.cjs
+      - name: Выдать архив с единственным HTML-файлом
+        uses: actions/upload-artifact@v4
+        with:
+          name: pepel-zemli-offline
+          path: offline/pepel-zemli-offline.html
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
