@@ -1,0 +1,842 @@
+[
+  {
+    "id": "0-0",
+    "name": "Ополченец",
+    "race": 0,
+    "role": 0,
+    "level": 1,
+    "parent": null,
+    "size": 1,
+    "combatClass": 0
+  },
+  {
+    "id": "0-0-0",
+    "name": "Страж",
+    "race": 0,
+    "role": 0,
+    "level": 2,
+    "parent": "0-0",
+    "size": 1,
+    "combatClass": 0
+  },
+  {
+    "id": "0-0-0-0",
+    "name": "Страж: ветеран",
+    "race": 0,
+    "role": 0,
+    "level": 3,
+    "parent": "0-0-0",
+    "size": 1,
+    "combatClass": 0
+  },
+  {
+    "id": "0-0-0-1",
+    "name": "Страж: владыка",
+    "race": 0,
+    "role": 0,
+    "level": 3,
+    "parent": "0-0-0",
+    "size": 1,
+    "combatClass": 0
+  },
+  {
+    "id": "0-0-1",
+    "name": "Берсерк",
+    "race": 0,
+    "role": 0,
+    "level": 2,
+    "parent": "0-0",
+    "size": 1,
+    "combatClass": 1
+  },
+  {
+    "id": "0-0-1-0",
+    "name": "Берсерк: ветеран",
+    "race": 0,
+    "role": 0,
+    "level": 3,
+    "parent": "0-0-1",
+    "size": 1,
+    "combatClass": 1
+  },
+  {
+    "id": "0-0-1-1",
+    "name": "Берсерк: владыка",
+    "race": 0,
+    "role": 0,
+    "level": 3,
+    "parent": "0-0-1",
+    "size": 3,
+    "combatClass": 1
+  },
+  {
+    "id": "0-1",
+    "name": "Лучник",
+    "race": 0,
+    "role": 1,
+    "level": 1,
+    "parent": null,
+    "size": 1,
+    "combatClass": 2
+  },
+  {
+    "id": "0-1-0",
+    "name": "Следопыт",
+    "race": 0,
+    "role": 1,
+    "level": 2,
+    "parent": "0-1",
+    "size": 1,
+    "combatClass": 2
+  },
+  {
+    "id": "0-1-0-0",
+    "name": "Следопыт: ветеран",
+    "race": 0,
+    "role": 1,
+    "level": 3,
+    "parent": "0-1-0",
+    "size": 1,
+    "combatClass": 2
+  },
+  {
+    "id": "0-1-0-1",
+    "name": "Следопыт: владыка",
+    "race": 0,
+    "role": 1,
+    "level": 3,
+    "parent": "0-1-0",
+    "size": 1,
+    "combatClass": 2
+  },
+  {
+    "id": "0-1-1",
+    "name": "Арбалетчик",
+    "race": 0,
+    "role": 1,
+    "level": 2,
+    "parent": "0-1",
+    "size": 1,
+    "combatClass": 2
+  },
+  {
+    "id": "0-1-1-0",
+    "name": "Арбалетчик: ветеран",
+    "race": 0,
+    "role": 1,
+    "level": 3,
+    "parent": "0-1-1",
+    "size": 1,
+    "combatClass": 2
+  },
+  {
+    "id": "0-1-1-1",
+    "name": "Арбалетчик: владыка",
+    "race": 0,
+    "role": 1,
+    "level": 3,
+    "parent": "0-1-1",
+    "size": 1,
+    "combatClass": 2
+  },
+  {
+    "id": "0-2",
+    "name": "Послушница",
+    "race": 0,
+    "role": 2,
+    "level": 1,
+    "parent": null,
+    "size": 1,
+    "combatClass": 4
+  },
+  {
+    "id": "0-2-0",
+    "name": "Целительница",
+    "race": 0,
+    "role": 2,
+    "level": 2,
+    "parent": "0-2",
+    "size": 1,
+    "combatClass": 4
+  },
+  {
+    "id": "0-2-0-0",
+    "name": "Целительница: ветеран",
+    "race": 0,
+    "role": 2,
+    "level": 3,
+    "parent": "0-2-0",
+    "size": 1,
+    "combatClass": 4
+  },
+  {
+    "id": "0-2-0-1",
+    "name": "Целительница: владыка",
+    "race": 0,
+    "role": 2,
+    "level": 3,
+    "parent": "0-2-0",
+    "size": 1,
+    "combatClass": 4
+  },
+  {
+    "id": "0-2-1",
+    "name": "Заклинательница",
+    "race": 0,
+    "role": 2,
+    "level": 2,
+    "parent": "0-2",
+    "size": 1,
+    "combatClass": 3
+  },
+  {
+    "id": "0-2-1-0",
+    "name": "Заклинательница: ветеран",
+    "race": 0,
+    "role": 2,
+    "level": 3,
+    "parent": "0-2-1",
+    "size": 1,
+    "combatClass": 3
+  },
+  {
+    "id": "0-2-1-1",
+    "name": "Заклинательница: владыка",
+    "race": 0,
+    "role": 2,
+    "level": 3,
+    "parent": "0-2-1",
+    "size": 1,
+    "combatClass": 3
+  },
+  {
+    "id": "1-0",
+    "name": "Скелет",
+    "race": 1,
+    "role": 0,
+    "level": 1,
+    "parent": null,
+    "size": 1,
+    "combatClass": 0
+  },
+  {
+    "id": "1-0-0",
+    "name": "Костяной страж",
+    "race": 1,
+    "role": 0,
+    "level": 2,
+    "parent": "1-0",
+    "size": 1,
+    "combatClass": 0
+  },
+  {
+    "id": "1-0-0-0",
+    "name": "Костяной страж: ветеран",
+    "race": 1,
+    "role": 0,
+    "level": 3,
+    "parent": "1-0-0",
+    "size": 1,
+    "combatClass": 0
+  },
+  {
+    "id": "1-0-0-1",
+    "name": "Костяной страж: владыка",
+    "race": 1,
+    "role": 0,
+    "level": 3,
+    "parent": "1-0-0",
+    "size": 1,
+    "combatClass": 0
+  },
+  {
+    "id": "1-0-1",
+    "name": "Упырь",
+    "race": 1,
+    "role": 0,
+    "level": 2,
+    "parent": "1-0",
+    "size": 1,
+    "combatClass": 1
+  },
+  {
+    "id": "1-0-1-0",
+    "name": "Упырь: ветеран",
+    "race": 1,
+    "role": 0,
+    "level": 3,
+    "parent": "1-0-1",
+    "size": 1,
+    "combatClass": 1
+  },
+  {
+    "id": "1-0-1-1",
+    "name": "Упырь: владыка",
+    "race": 1,
+    "role": 0,
+    "level": 3,
+    "parent": "1-0-1",
+    "size": 3,
+    "combatClass": 1
+  },
+  {
+    "id": "1-1",
+    "name": "Мертвый стрелок",
+    "race": 1,
+    "role": 1,
+    "level": 1,
+    "parent": null,
+    "size": 1,
+    "combatClass": 2
+  },
+  {
+    "id": "1-1-0",
+    "name": "Могильный охотник",
+    "race": 1,
+    "role": 1,
+    "level": 2,
+    "parent": "1-1",
+    "size": 1,
+    "combatClass": 2
+  },
+  {
+    "id": "1-1-0-0",
+    "name": "Могильный охотник: ветеран",
+    "race": 1,
+    "role": 1,
+    "level": 3,
+    "parent": "1-1-0",
+    "size": 1,
+    "combatClass": 2
+  },
+  {
+    "id": "1-1-0-1",
+    "name": "Могильный охотник: владыка",
+    "race": 1,
+    "role": 1,
+    "level": 3,
+    "parent": "1-1-0",
+    "size": 1,
+    "combatClass": 2
+  },
+  {
+    "id": "1-1-1",
+    "name": "Костяной маг",
+    "race": 1,
+    "role": 2,
+    "level": 2,
+    "parent": "1-2",
+    "size": 1,
+    "combatClass": 3
+  },
+  {
+    "id": "1-1-1-0",
+    "name": "Костяной маг: ветеран",
+    "race": 1,
+    "role": 2,
+    "level": 3,
+    "parent": "1-1-1",
+    "size": 1,
+    "combatClass": 3
+  },
+  {
+    "id": "1-1-1-1",
+    "name": "Костяной маг: владыка",
+    "race": 1,
+    "role": 2,
+    "level": 3,
+    "parent": "1-1-1",
+    "size": 1,
+    "combatClass": 3
+  },
+  {
+    "id": "1-2",
+    "name": "Призрак",
+    "race": 1,
+    "role": 2,
+    "level": 1,
+    "parent": null,
+    "size": 1,
+    "combatClass": 3
+  },
+  {
+    "id": "1-2-0",
+    "name": "Банши",
+    "race": 1,
+    "role": 2,
+    "level": 2,
+    "parent": "1-2",
+    "size": 1,
+    "combatClass": 3
+  },
+  {
+    "id": "1-2-0-0",
+    "name": "Банши: ветеран",
+    "race": 1,
+    "role": 2,
+    "level": 3,
+    "parent": "1-2-0",
+    "size": 1,
+    "combatClass": 3
+  },
+  {
+    "id": "1-2-0-1",
+    "name": "Банши: владыка",
+    "race": 1,
+    "role": 2,
+    "level": 3,
+    "parent": "1-2-0",
+    "size": 1,
+    "combatClass": 3
+  },
+  {
+    "id": "1-2-1",
+    "name": "Могильный лекарь",
+    "race": 1,
+    "role": 2,
+    "level": 2,
+    "parent": "1-2",
+    "size": 1,
+    "combatClass": 4
+  },
+  {
+    "id": "1-2-1-0",
+    "name": "Могильный лекарь: ветеран",
+    "race": 1,
+    "role": 2,
+    "level": 3,
+    "parent": "1-2-1",
+    "size": 1,
+    "combatClass": 4
+  },
+  {
+    "id": "1-2-1-1",
+    "name": "Могильный лекарь: владыка",
+    "race": 1,
+    "role": 2,
+    "level": 3,
+    "parent": "1-2-1",
+    "size": 1,
+    "combatClass": 4
+  },
+  {
+    "id": "2-0",
+    "name": "Бес",
+    "race": 2,
+    "role": 0,
+    "level": 1,
+    "parent": null,
+    "size": 1,
+    "combatClass": 0
+  },
+  {
+    "id": "2-0-0",
+    "name": "Рогатый страж",
+    "race": 2,
+    "role": 0,
+    "level": 2,
+    "parent": "2-0",
+    "size": 1,
+    "combatClass": 0
+  },
+  {
+    "id": "2-0-0-0",
+    "name": "Рогатый страж: ветеран",
+    "race": 2,
+    "role": 0,
+    "level": 3,
+    "parent": "2-0-0",
+    "size": 1,
+    "combatClass": 0
+  },
+  {
+    "id": "2-0-0-1",
+    "name": "Рогатый страж: владыка",
+    "race": 2,
+    "role": 0,
+    "level": 3,
+    "parent": "2-0-0",
+    "size": 1,
+    "combatClass": 0
+  },
+  {
+    "id": "2-0-1",
+    "name": "Адский зверь",
+    "race": 2,
+    "role": 0,
+    "level": 2,
+    "parent": "2-0",
+    "size": 1,
+    "combatClass": 1
+  },
+  {
+    "id": "2-0-1-0",
+    "name": "Адский зверь: ветеран",
+    "race": 2,
+    "role": 0,
+    "level": 3,
+    "parent": "2-0-1",
+    "size": 1,
+    "combatClass": 1
+  },
+  {
+    "id": "2-0-1-1",
+    "name": "Адский зверь: владыка",
+    "race": 2,
+    "role": 0,
+    "level": 3,
+    "parent": "2-0-1",
+    "size": 3,
+    "combatClass": 1
+  },
+  {
+    "id": "2-1",
+    "name": "Огненный метатель",
+    "race": 2,
+    "role": 1,
+    "level": 1,
+    "parent": null,
+    "size": 1,
+    "combatClass": 2
+  },
+  {
+    "id": "2-1-0",
+    "name": "Пиромант",
+    "race": 2,
+    "role": 2,
+    "level": 2,
+    "parent": "2-2",
+    "size": 1,
+    "combatClass": 3
+  },
+  {
+    "id": "2-1-0-0",
+    "name": "Пиромант: ветеран",
+    "race": 2,
+    "role": 2,
+    "level": 3,
+    "parent": "2-1-0",
+    "size": 1,
+    "combatClass": 3
+  },
+  {
+    "id": "2-1-0-1",
+    "name": "Пиромант: владыка",
+    "race": 2,
+    "role": 2,
+    "level": 3,
+    "parent": "2-1-0",
+    "size": 1,
+    "combatClass": 3
+  },
+  {
+    "id": "2-1-1",
+    "name": "Пепельный охотник",
+    "race": 2,
+    "role": 1,
+    "level": 2,
+    "parent": "2-1",
+    "size": 1,
+    "combatClass": 2
+  },
+  {
+    "id": "2-1-1-0",
+    "name": "Пепельный охотник: ветеран",
+    "race": 2,
+    "role": 1,
+    "level": 3,
+    "parent": "2-1-1",
+    "size": 1,
+    "combatClass": 2
+  },
+  {
+    "id": "2-1-1-1",
+    "name": "Пепельный охотник: владыка",
+    "race": 2,
+    "role": 1,
+    "level": 3,
+    "parent": "2-1-1",
+    "size": 1,
+    "combatClass": 2
+  },
+  {
+    "id": "2-2",
+    "name": "Культист",
+    "race": 2,
+    "role": 2,
+    "level": 1,
+    "parent": null,
+    "size": 1,
+    "combatClass": 4
+  },
+  {
+    "id": "2-2-0",
+    "name": "Кровавый лекарь",
+    "race": 2,
+    "role": 2,
+    "level": 2,
+    "parent": "2-2",
+    "size": 1,
+    "combatClass": 4
+  },
+  {
+    "id": "2-2-0-0",
+    "name": "Кровавый лекарь: ветеран",
+    "race": 2,
+    "role": 2,
+    "level": 3,
+    "parent": "2-2-0",
+    "size": 1,
+    "combatClass": 4
+  },
+  {
+    "id": "2-2-0-1",
+    "name": "Кровавый лекарь: владыка",
+    "race": 2,
+    "role": 2,
+    "level": 3,
+    "parent": "2-2-0",
+    "size": 1,
+    "combatClass": 4
+  },
+  {
+    "id": "2-2-1",
+    "name": "Призыватель",
+    "race": 2,
+    "role": 2,
+    "level": 2,
+    "parent": "2-2",
+    "size": 1,
+    "combatClass": 5
+  },
+  {
+    "id": "2-2-1-0",
+    "name": "Призыватель: ветеран",
+    "race": 2,
+    "role": 2,
+    "level": 3,
+    "parent": "2-2-1",
+    "size": 1,
+    "combatClass": 5
+  },
+  {
+    "id": "2-2-1-1",
+    "name": "Призыватель: владыка",
+    "race": 2,
+    "role": 2,
+    "level": 3,
+    "parent": "2-2-1",
+    "size": 1,
+    "combatClass": 5
+  },
+  {
+    "id": "3-0",
+    "name": "Воитель",
+    "race": 3,
+    "role": 0,
+    "level": 1,
+    "parent": null,
+    "size": 1,
+    "combatClass": 0
+  },
+  {
+    "id": "3-0-0",
+    "name": "Хранитель",
+    "race": 3,
+    "role": 0,
+    "level": 2,
+    "parent": "3-0",
+    "size": 1,
+    "combatClass": 0
+  },
+  {
+    "id": "3-0-0-0",
+    "name": "Хранитель: ветеран",
+    "race": 3,
+    "role": 0,
+    "level": 3,
+    "parent": "3-0-0",
+    "size": 1,
+    "combatClass": 0
+  },
+  {
+    "id": "3-0-0-1",
+    "name": "Хранитель: владыка",
+    "race": 3,
+    "role": 0,
+    "level": 3,
+    "parent": "3-0-0",
+    "size": 1,
+    "combatClass": 0
+  },
+  {
+    "id": "3-0-1",
+    "name": "Танцор клинков",
+    "race": 3,
+    "role": 0,
+    "level": 2,
+    "parent": "3-0",
+    "size": 1,
+    "combatClass": 1
+  },
+  {
+    "id": "3-0-1-0",
+    "name": "Танцор клинков: ветеран",
+    "race": 3,
+    "role": 0,
+    "level": 3,
+    "parent": "3-0-1",
+    "size": 1,
+    "combatClass": 1
+  },
+  {
+    "id": "3-0-1-1",
+    "name": "Танцор клинков: владыка",
+    "race": 3,
+    "role": 0,
+    "level": 3,
+    "parent": "3-0-1",
+    "size": 3,
+    "combatClass": 1
+  },
+  {
+    "id": "3-1",
+    "name": "Охотница",
+    "race": 3,
+    "role": 1,
+    "level": 1,
+    "parent": null,
+    "size": 1,
+    "combatClass": 2
+  },
+  {
+    "id": "3-1-0",
+    "name": "Снайпер",
+    "race": 3,
+    "role": 1,
+    "level": 2,
+    "parent": "3-1",
+    "size": 1,
+    "combatClass": 2
+  },
+  {
+    "id": "3-1-0-0",
+    "name": "Снайпер: ветеран",
+    "race": 3,
+    "role": 1,
+    "level": 3,
+    "parent": "3-1-0",
+    "size": 1,
+    "combatClass": 2
+  },
+  {
+    "id": "3-1-0-1",
+    "name": "Снайпер: владыка",
+    "race": 3,
+    "role": 1,
+    "level": 3,
+    "parent": "3-1-0",
+    "size": 1,
+    "combatClass": 2
+  },
+  {
+    "id": "3-1-1",
+    "name": "Лесной дозорный",
+    "race": 3,
+    "role": 1,
+    "level": 2,
+    "parent": "3-1",
+    "size": 1,
+    "combatClass": 2
+  },
+  {
+    "id": "3-1-1-0",
+    "name": "Лесной дозорный: ветеран",
+    "race": 3,
+    "role": 1,
+    "level": 3,
+    "parent": "3-1-1",
+    "size": 1,
+    "combatClass": 2
+  },
+  {
+    "id": "3-1-1-1",
+    "name": "Лесной дозорный: владыка",
+    "race": 3,
+    "role": 1,
+    "level": 3,
+    "parent": "3-1-1",
+    "size": 1,
+    "combatClass": 2
+  },
+  {
+    "id": "3-2",
+    "name": "Друид",
+    "race": 3,
+    "role": 2,
+    "level": 1,
+    "parent": null,
+    "size": 1,
+    "combatClass": 4
+  },
+  {
+    "id": "3-2-0",
+    "name": "Древесный лекарь",
+    "race": 3,
+    "role": 2,
+    "level": 2,
+    "parent": "3-2",
+    "size": 1,
+    "combatClass": 4
+  },
+  {
+    "id": "3-2-0-0",
+    "name": "Древесный лекарь: ветеран",
+    "race": 3,
+    "role": 2,
+    "level": 3,
+    "parent": "3-2-0",
+    "size": 1,
+    "combatClass": 4
+  },
+  {
+    "id": "3-2-0-1",
+    "name": "Древесный лекарь: владыка",
+    "race": 3,
+    "role": 2,
+    "level": 3,
+    "parent": "3-2-0",
+    "size": 1,
+    "combatClass": 4
+  },
+  {
+    "id": "3-2-1",
+    "name": "Повелитель терний",
+    "race": 3,
+    "role": 2,
+    "level": 2,
+    "parent": "3-2",
+    "size": 1,
+    "combatClass": 3
+  },
+  {
+    "id": "3-2-1-0",
+    "name": "Повелитель терний: ветеран",
+    "race": 3,
+    "role": 2,
+    "level": 3,
+    "parent": "3-2-1",
+    "size": 1,
+    "combatClass": 3
+  },
+  {
+    "id": "3-2-1-1",
+    "name": "Повелитель терний: владыка",
+    "race": 3,
+    "role": 2,
+    "level": 3,
+    "parent": "3-2-1",
+    "size": 1,
+    "combatClass": 3
+  }
+]

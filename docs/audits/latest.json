@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-15T08:04:08.514Z",
+  "commit": null,
+  "workingTree": "без локальной истории",
+  "checks": [
+    {
+      "name": "Автоматические проверки",
+      "status": "Подтверждено проверкой",
+      "evidence": "npm test",
+      "output": "\n--check dist/expansion.js\n\ntests/economy.cjs\nPASS startup economy, calendar-independent enemies, guaranteed loot, sale, purchase and migration\nPASS fear victory grants loot and experience\n\ntests/startup-combat.cjs\nPASS race 0: three early wins, no casualties, 35 provisions\nPASS race 1: three early wins, no casualties, 34 provisions\nPASS race 2: three early wins, no casualties, 34 provisions\nPASS race 3: three early wins, no casualties, 33 provisions\n\ntests/audit.cjs\nPASS Legacy hero has stable identity and finite combat values\nPASS Legacy hero can select and cast a spell after restore\nPASS Spell effect uses finite source power\nPASS Default unit attack after selecting another units skill remains an attack\nPASS Enemy melee occupies front before ranged and healers\nPASS No voluntary betrayal control or callable betrayal without hunger\nPASS Closing inspection preserves turn and action and has reachable top close\nPASS Mobile combat columns never contain a two-column army grid\nPASS Spell cannot damage permanently by producing NaN\nPASS Closing or refreshing modal does not grant mana twice\nPASS Healing reflection is exactly half actual ally healing\nPASS Starvation queues one stronger demonic betrayer after two warnings\nPASS Every ability performs through its UI flow\nPASS A damaged legacy save survives a full battle and XP reward\nPASS All 84 units execute actual special actions and finite outcomes\nPASS Enemy inspection pauses exactly one pending action and closing resumes once\nPASS Reload keeps current actor, mana, army levels, talents and perfection\nPASS Flee completes after two enemy actions even with a modal pause\nPASS Area spell grants at most one perfection stack per cast\nPASS Enemy kills cannot grant organs to the player\nPASS A killed rival hero cannot remain alive by escaping the rest of the battle\nPASS Settlement quest templates vary by settlement from first visit\nPASS Every initial mythic artifact is accessible through a ruin or boss\nPASS Escaping from hunger rebellion permanently retains the hostile\nPASS Invalid out-of-battle clicks do not throw\n25 passed, 0 failed\n\ntests/interface.cjs\nPASS campaign shell, compact roster, mage label, summon round-trip, in-app restart and every evolution role/portrait.\n\ntests/healer.cjs\nPASS 1-2-1 has healing button, rejects enemy as healing target and heals ally\nPASS 1-2-1-0 has healing button, rejects enemy as healing target and heals ally\nPASS 1-2-1-1 has healing button, rejects enemy as healing target and heals ally\nPASS all three grave healer forms\nPASS existing grave healer is repaired in place with progress intact\n\ntests/ritual-and-identity.cjs\nPASS Bone mage is a caster, with a magical ancestor and real mana\nPASS Existing mislabeled mage save restores identity without losing progress\nPASS Ritual is confirmable inside the app when system dialogs are blocked\nPASS Ritual confirmation is atomic and stale or duplicate clicks do nothing\nPASS Ritual explains living enemy owner lock instead of silently ignoring click\n5 passed, 0 failed\n\ntests/combat-simulation.cjs\nPASS race 0, patrol, 22 steps, outcome victory\nPASS race 0, boss, 38 steps, outcome victory\nPASS race 1, patrol, 35 steps, outcome victory\nPASS race 1, boss, 37 steps, outcome victory\nPASS race 2, patrol, 33 steps, outcome victory\nPASS race 2, boss, 41 steps, outcome victory\nPASS race 3, patrol, 27 steps, outcome victory\nPASS race 3, boss, 35 steps, outcome victory\nCompleted 8 multi-turn simulations without stuck turns or invalid health.\n\ntest-expansion.cjs\nPassed: 84 definitions, evolution, automatic intercept order, ranged exclusion, immunities, altar cooldown/ownership/prayer, sacrifice, XP/max level, talent reset, summon limits, quest turnover, migration.\nPassed: all race battles, hero spells, boss effects, all 84 ability labels, XP redistribution, human priest last stand, lateral formation, talent map.\n\ntest-bosses.cjs\nBoss encounter, telegraph, damage, summon, phase, burning, guard, reward and asset checks passed\n\ntest-world-art.cjs\nWorld art, NPC dialogs, four altar states, ruins encounters and loot verified\n"
+    },
+    {
+      "name": "Целостность изображений",
+      "status": "Подтверждено проверкой",
+      "count": 115,
+      "missing": [],
+      "changed": []
+    },
+    {
+      "name": "Интерфейс телефона",
+      "status": "Требует проверки",
+      "evidence": "Нужен отдельный отчёт профильной роли"
+    },
+    {
+      "name": "Интерфейс компьютера",
+      "status": "Требует проверки",
+      "evidence": "Нужен отдельный отчёт профильной роли"
+    },
+    {
+      "name": "Длительный баланс",
+      "status": "Требует проверки",
+      "evidence": "Нужен отдельный отчёт профильной роли"
+    },
+    {
+      "name": "Удовольствие от игры",
+      "status": "Требует проверки",
+      "evidence": "Нужен отдельный отчёт профильной роли"
+    },
+    {
+      "name": "Свежий обзор аналогов",
+      "status": "Требует проверки",
+      "evidence": "Нужен отдельный отчёт профильной роли"
+    }
+  ]
+}

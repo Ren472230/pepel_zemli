@@ -1,0 +1,577 @@
+[
+  {
+    "path": "dist/assets/0-0-0-0.webp",
+    "sha256": "ca230425db4fb7386849599d682e8534d7c2938412d9d2628735e5a524c76495",
+    "bytes": 152458
+  },
+  {
+    "path": "dist/assets/0-0-0-1.webp",
+    "sha256": "f361e7fb0e9d007630c65336ad7eccec0db5a23d2826fce622f94e0b95ccca6d",
+    "bytes": 197298
+  },
+  {
+    "path": "dist/assets/0-0-0.webp",
+    "sha256": "2dcf115fd229cbec6388f0c142d8cffc148d495c701f78eb2d5f9ca617fcedcc",
+    "bytes": 164354
+  },
+  {
+    "path": "dist/assets/0-0-1-0.webp",
+    "sha256": "8df39762c22e3bbf14838f59601613f564bc6e79b1c8a18d0a09016b587eab39",
+    "bytes": 194576
+  },
+  {
+    "path": "dist/assets/0-0-1-1.webp",
+    "sha256": "a09fe46e8ac1693b24ba28748f698494527ab7008b75f6bd06e1b4278c0c8bbd",
+    "bytes": 165186
+  },
+  {
+    "path": "dist/assets/0-0-1.webp",
+    "sha256": "21deee5c57500a0feae02b0986df694c9591050a63899cfb542234e6d7967440",
+    "bytes": 190678
+  },
+  {
+    "path": "dist/assets/0-0.webp",
+    "sha256": "0eaf90132ff68627a6cc8702a2c0eca0a5d818c4e269126a0d4cdbcf0bfd8e24",
+    "bytes": 142194
+  },
+  {
+    "path": "dist/assets/0-1-0-0.webp",
+    "sha256": "244a27d1975ac265352b0836c3a1556c5aa22b170d17fc3e5ac8dcdc749aaa46",
+    "bytes": 204576
+  },
+  {
+    "path": "dist/assets/0-1-0-1.webp",
+    "sha256": "3c49f9f1a6f0e8f48a4af08b0ceaa84f3ee2ecc0020a8cfa362b69b77209a446",
+    "bytes": 172586
+  },
+  {
+    "path": "dist/assets/0-1-0.webp",
+    "sha256": "810a8e98d6567d0668d85e2a36a2b1220f6e63a121c8af916c15e79a20a5e0b5",
+    "bytes": 150668
+  },
+  {
+    "path": "dist/assets/0-1-1-0.webp",
+    "sha256": "49b7d693ad431660c005338b2872bce21429d7c2a0e7dbfeff51e5cd759c90ff",
+    "bytes": 183320
+  },
+  {
+    "path": "dist/assets/0-1-1-1.webp",
+    "sha256": "9ac85b0d0a7073c21872a12e16973868403249764b4863f78ea904a13b439c9d",
+    "bytes": 172484
+  },
+  {
+    "path": "dist/assets/0-1-1.webp",
+    "sha256": "82fe1c3c8e4f561953d10a3cdae8f3db6059ccf63f0728b654427573b20cc419",
+    "bytes": 200204
+  },
+  {
+    "path": "dist/assets/0-1.webp",
+    "sha256": "1132a68277ae67fcdb1b89ab7447b9996b97ab11f1be3b1146d5a6ff90ff10d6",
+    "bytes": 120986
+  },
+  {
+    "path": "dist/assets/0-2-0-0.webp",
+    "sha256": "8343b0b21146172edc921a550db98bcf50c03165401e838e422d15ba9592b795",
+    "bytes": 198468
+  },
+  {
+    "path": "dist/assets/0-2-0-1.webp",
+    "sha256": "eaddfe4d079385c1e90b23a171211d2609e6f9b25c937bffce7057a49accda46",
+    "bytes": 227260
+  },
+  {
+    "path": "dist/assets/0-2-0.webp",
+    "sha256": "5718d483deee9d6e2a24cf031e0055825fb2b8cec210cb8d9aaa60e0b714f11b",
+    "bytes": 188142
+  },
+  {
+    "path": "dist/assets/0-2-1-0.webp",
+    "sha256": "59eaa72776e404170b2575c95e6b56de9712559ecb94d7f559780063f8a6261d",
+    "bytes": 192250
+  },
+  {
+    "path": "dist/assets/0-2-1-1.webp",
+    "sha256": "de5d225d3fbcbc3b724d04c48fd5ef30f688b0e84a54681158330bd4e13ab08c",
+    "bytes": 186644
+  },
+  {
+    "path": "dist/assets/0-2-1.webp",
+    "sha256": "aa431c1477db55c095946fe7005ecac3f2722c4b6f9b826daec07f2f70680c81",
+    "bytes": 145336
+  },
+  {
+    "path": "dist/assets/0-2.webp",
+    "sha256": "67224211e7882ff6d299da50be4bb32df4cca8108666b2fbcf2557d3214de665",
+    "bytes": 119362
+  },
+  {
+    "path": "dist/assets/1-0-0-0.webp",
+    "sha256": "f40a19ba93386d5cf596ded86a1ad0392bba5626349e2c06266072e19931e6c3",
+    "bytes": 187350
+  },
+  {
+    "path": "dist/assets/1-0-0-1.webp",
+    "sha256": "a0c3b00ebc9bec626d8e03664e296146a47d4aa1703b846df11b36e8e82e718e",
+    "bytes": 221250
+  },
+  {
+    "path": "dist/assets/1-0-0.webp",
+    "sha256": "22bb8373d42fb7c613dac014627197fd9293e4058f64a5474387236a06868c94",
+    "bytes": 170562
+  },
+  {
+    "path": "dist/assets/1-0-1-0.webp",
+    "sha256": "a652ad1377cf04462c537ab1e39dee49f3204c984941a179dcd0985bb1a7b640",
+    "bytes": 174862
+  },
+  {
+    "path": "dist/assets/1-0-1-1.webp",
+    "sha256": "2bb45dffcf917c8bcb891cb8a67ca63af962ddbc313e476c58fc31855048b08e",
+    "bytes": 173784
+  },
+  {
+    "path": "dist/assets/1-0-1.webp",
+    "sha256": "9b291eaf6f8f2442bed417e4436a2262859b4c4f66937f05901a457d72e33d37",
+    "bytes": 161160
+  },
+  {
+    "path": "dist/assets/1-0.webp",
+    "sha256": "b09c1187e4e7f5e4cf14cc51545b8b7e4736fc6aed23589540e965e5f706887c",
+    "bytes": 147492
+  },
+  {
+    "path": "dist/assets/1-1-0-0.webp",
+    "sha256": "c57e20d5d58089ceaeaf2e768186ec27d23469a31698037b7af3feea51895d52",
+    "bytes": 178820
+  },
+  {
+    "path": "dist/assets/1-1-0-1.webp",
+    "sha256": "243ec27622bf582e75af63d0f648d1cf096d48bdc4d06197dd9eeda3f185f8e4",
+    "bytes": 194546
+  },
+  {
+    "path": "dist/assets/1-1-0.webp",
+    "sha256": "fc3a5a62f5f94cb9813048c8e21e7a538c64cd5522c5db0a502221a74702aa2e",
+    "bytes": 186026
+  },
+  {
+    "path": "dist/assets/1-1-1-0.webp",
+    "sha256": "6eb5b42340ad20ae0994934cf60a7c8e43f9a99bc555742ec9687253436dbea4",
+    "bytes": 163314
+  },
+  {
+    "path": "dist/assets/1-1-1-1.webp",
+    "sha256": "63a9f3ad95fba62bff4c820028d46ac7fd0d9c717c90f15416d2a5f826fdc712",
+    "bytes": 184518
+  },
+  {
+    "path": "dist/assets/1-1-1.webp",
+    "sha256": "5668577cd404fb4939c434a5a657cd85f47822271c82c1acb31966948a192547",
+    "bytes": 168326
+  },
+  {
+    "path": "dist/assets/1-1.webp",
+    "sha256": "93d8dbb5d8df6a10c30b46317248fd41dc940740b364c4ba8f406eeeca2a821f",
+    "bytes": 132588
+  },
+  {
+    "path": "dist/assets/1-2-0-0.webp",
+    "sha256": "7e819ebf2f55700975f8047f7f29d3dee529b2b3659a4501bbc4cb87ea92bc97",
+    "bytes": 174278
+  },
+  {
+    "path": "dist/assets/1-2-0-1.webp",
+    "sha256": "c44989de6160f0554f7cd7a696942bc6028cf83a7b9fd8b85251c964d7916873",
+    "bytes": 205462
+  },
+  {
+    "path": "dist/assets/1-2-0.webp",
+    "sha256": "6ecc75062ddc459f4e9f93e293da0e4f48ef4feeebfc6bc35b6370c38107eae4",
+    "bytes": 159320
+  },
+  {
+    "path": "dist/assets/1-2-1-0.webp",
+    "sha256": "1ec37846189b9b5323d9ec48780e1a583e60dd00d9a703f8b6ffc6341b4c45c8",
+    "bytes": 207748
+  },
+  {
+    "path": "dist/assets/1-2-1-1.webp",
+    "sha256": "03b999989eb20c36d656297123424e71d246985577c8a30d0fef347dc0a099ce",
+    "bytes": 206400
+  },
+  {
+    "path": "dist/assets/1-2-1.webp",
+    "sha256": "0906c17e1f8a71fa11c2667ea87fee0f1c223dc494842f8ad1d460e9ccaaa674",
+    "bytes": 187136
+  },
+  {
+    "path": "dist/assets/1-2.webp",
+    "sha256": "de666f847bedb079d0af1da2562d8ce155bb997ad5c89b794b66142fd93cc47f",
+    "bytes": 154912
+  },
+  {
+    "path": "dist/assets/2-0-0-0.webp",
+    "sha256": "bba2e51c3f5477a2274d621d1f2d4220ce1249c401262a81d48888399208b3dd",
+    "bytes": 190606
+  },
+  {
+    "path": "dist/assets/2-0-0-1.webp",
+    "sha256": "65fe61ee6e1e423ebeca9e24c155e587d76fbaa02efd47a3cff276ecc414b34a",
+    "bytes": 193888
+  },
+  {
+    "path": "dist/assets/2-0-0.webp",
+    "sha256": "c02b52c71106078ba7c03de522dfdcbd3a510d33701222c5cb7155494d383377",
+    "bytes": 114102
+  },
+  {
+    "path": "dist/assets/2-0-1-0.webp",
+    "sha256": "778c26e109e6d4aa7cbfdd3df1d6a0444b7363a0296481d23c573079950a9a7b",
+    "bytes": 172948
+  },
+  {
+    "path": "dist/assets/2-0-1-1.webp",
+    "sha256": "716e64fa7f1b50a5d474e3df26758f7e17d353f6fc997afeaf7d61af25efa65e",
+    "bytes": 216558
+  },
+  {
+    "path": "dist/assets/2-0-1.webp",
+    "sha256": "68a2c7ae6e266d99ab2df0a4645d254835543dfa2f015717f5ab7829ba7ad45b",
+    "bytes": 177856
+  },
+  {
+    "path": "dist/assets/2-0.webp",
+    "sha256": "cb66b3338a41e33ed64c8857c933fe4f14d8a9accb78e15cc113beac2d46c1f7",
+    "bytes": 170772
+  },
+  {
+    "path": "dist/assets/2-1-0-0.webp",
+    "sha256": "c2c3ae5017672f184d81689de0a42fda9cc07e51376b37814beb78bf0e73e503",
+    "bytes": 221172
+  },
+  {
+    "path": "dist/assets/2-1-0-1.webp",
+    "sha256": "8280e105a701dcb4109385e8a3df25ae325742dce781583074de31132651a363",
+    "bytes": 195642
+  },
+  {
+    "path": "dist/assets/2-1-0.webp",
+    "sha256": "4b1f459498f19476cfb178b2fa4f947efd264de10f330588a9dc05cfce4c4f01",
+    "bytes": 160588
+  },
+  {
+    "path": "dist/assets/2-1-1-0.webp",
+    "sha256": "18d24a3be92e462f2dc9473a10e0825a7b4ec916710e8381d1b14a6ab01dcee4",
+    "bytes": 165594
+  },
+  {
+    "path": "dist/assets/2-1-1-1.webp",
+    "sha256": "76ffc53bf5beedbc57f3ab555fd6522849fc1b9311454b1d3db772d13063f5b2",
+    "bytes": 200276
+  },
+  {
+    "path": "dist/assets/2-1-1.webp",
+    "sha256": "0da903fae48568a7abf979dbbc7629b6dc697fe6c9ea7f2bf9519aadd515916b",
+    "bytes": 193112
+  },
+  {
+    "path": "dist/assets/2-1.webp",
+    "sha256": "7990ba1a31eb6d7659908c04d29a1361d926a74e4b0433a08f8fb47c60504249",
+    "bytes": 123784
+  },
+  {
+    "path": "dist/assets/2-2-0-0.webp",
+    "sha256": "c6b5cbdd5588149a23323a00d545e6516c4d4fd6d98d247d2a0188e4aee128a3",
+    "bytes": 192668
+  },
+  {
+    "path": "dist/assets/2-2-0-1.webp",
+    "sha256": "ffe99fa7a19d76080408281c8d9302578c6467af3196be680ec7110b2dd2b156",
+    "bytes": 155888
+  },
+  {
+    "path": "dist/assets/2-2-0.webp",
+    "sha256": "c5c659856506d98711ecf3dde4d17c1543ece743b5e68ec572b8a373a8e3592a",
+    "bytes": 167670
+  },
+  {
+    "path": "dist/assets/2-2-1-0.webp",
+    "sha256": "343607a9866e5eddd01c688260df781cdcaf71fe1b6c4b6b6c99551710499924",
+    "bytes": 153634
+  },
+  {
+    "path": "dist/assets/2-2-1-1.webp",
+    "sha256": "8c35a61031a4ebad0fbf607a6a6cec4cb75e94a13fafc7ef664913add1dcb09a",
+    "bytes": 162556
+  },
+  {
+    "path": "dist/assets/2-2-1.webp",
+    "sha256": "580e218ee27dad5856254c36180465bb1c7ac9c778e8a517fb094b02812ef5bd",
+    "bytes": 168086
+  },
+  {
+    "path": "dist/assets/2-2.webp",
+    "sha256": "cc813ca646b5d9362c575d4b00be5c04767f05705ef38ae1506c288bdf4d7e0a",
+    "bytes": 124692
+  },
+  {
+    "path": "dist/assets/3-0-0-0.webp",
+    "sha256": "a1f977458781a937c7d110466b64b9d4feebafe7d97e63269a828e98a03a4b80",
+    "bytes": 177616
+  },
+  {
+    "path": "dist/assets/3-0-0-1.webp",
+    "sha256": "d51169b14dda188a366fca509c4070b6fb7f82e02d5f387ffa3e06329f1f7f8e",
+    "bytes": 165310
+  },
+  {
+    "path": "dist/assets/3-0-0.webp",
+    "sha256": "6e124908e844a472e85f2c50ed2e7c705e4f085160933eaf5de2f6d720fc63aa",
+    "bytes": 154300
+  },
+  {
+    "path": "dist/assets/3-0-1-0.webp",
+    "sha256": "09e36bac4f4089260ca9e558fcc4fc75c4446e6b84eb192adf5a045d3d085685",
+    "bytes": 167850
+  },
+  {
+    "path": "dist/assets/3-0-1-1.webp",
+    "sha256": "39258fedfdec12cd59120f5cc2bcfefc0e9e272367c04854d7b1f83a0c5fe3d2",
+    "bytes": 145550
+  },
+  {
+    "path": "dist/assets/3-0-1.webp",
+    "sha256": "cb33ef640c7ca638c91e63cf049343995ffe8b111c060373b5222e0c78301192",
+    "bytes": 155488
+  },
+  {
+    "path": "dist/assets/3-0.webp",
+    "sha256": "3bab89950bb665ee1c013d10829642fac578df3265a5cb0990aa66dc24036c1d",
+    "bytes": 140536
+  },
+  {
+    "path": "dist/assets/3-1-0-0.webp",
+    "sha256": "9e8fe82957b5c9ca53d45e6f8478df4d20bd542b613573929e4e427d392d41aa",
+    "bytes": 165280
+  },
+  {
+    "path": "dist/assets/3-1-0-1.webp",
+    "sha256": "615e3f966d7b0db8e8bab1281bf2656636245d48f88a697e88e5d59b6dc543ca",
+    "bytes": 161552
+  },
+  {
+    "path": "dist/assets/3-1-0.webp",
+    "sha256": "926591ccd3cc17d105ed1a33b6b06405f0d055d2c57377250b2b4a731a57b698",
+    "bytes": 141938
+  },
+  {
+    "path": "dist/assets/3-1-1-0.webp",
+    "sha256": "08bc11c7d1aea809edd3012b29068a3fe61f410322209f124874a2d96fc0f617",
+    "bytes": 175664
+  },
+  {
+    "path": "dist/assets/3-1-1-1.webp",
+    "sha256": "5c93288f0785399e8d9a478cb8c559f94c46f343c87d4a47622ee4040cd7803f",
+    "bytes": 163524
+  },
+  {
+    "path": "dist/assets/3-1-1.webp",
+    "sha256": "c9a31d4ddc22e789a0ea8c130cb1f56a00ed2c1c423a772d0ad21de0a8a09a1c",
+    "bytes": 151726
+  },
+  {
+    "path": "dist/assets/3-1.webp",
+    "sha256": "ad23e66d5067c5e698b8c7a88084deca7c7f8403a5a7f564d1170c905ca3b5d5",
+    "bytes": 126584
+  },
+  {
+    "path": "dist/assets/3-2-0-0.webp",
+    "sha256": "a88d1837cc03fd0a213a3b25270e8b05aabd9e16d06c467df966a83b7e8c62c8",
+    "bytes": 169376
+  },
+  {
+    "path": "dist/assets/3-2-0-1.webp",
+    "sha256": "e67103f7d7fc3c2dff937fa73d3db15d91fb97c5be175571eca29b38c4e1fc2a",
+    "bytes": 189114
+  },
+  {
+    "path": "dist/assets/3-2-0.webp",
+    "sha256": "ce9fa2467d264800a9c30a4fe6e816bbd46bf366156dcf5265550efaff50824f",
+    "bytes": 153930
+  },
+  {
+    "path": "dist/assets/3-2-1-0.webp",
+    "sha256": "99405e9c2a0ae82c1a3ed355348c3b6d0a6534ec18d35b7bfd3e405bac78d6b8",
+    "bytes": 157164
+  },
+  {
+    "path": "dist/assets/3-2-1-1.webp",
+    "sha256": "de86bb5d442658b2cd5319057751c9f2d60dbeaa71d4c75bf05b0ea359efe544",
+    "bytes": 162638
+  },
+  {
+    "path": "dist/assets/3-2-1.webp",
+    "sha256": "d2ad319fe93ac397c2bb47a9defadd984a5ddd5e2fc0acb70ee07159c178297f",
+    "bytes": 146774
+  },
+  {
+    "path": "dist/assets/3-2.webp",
+    "sha256": "794c1285b66e9e8088cae540c9ef6edaa8177d367bfaa0bb293b5b4dd7c15989",
+    "bytes": 153892
+  },
+  {
+    "path": "dist/assets/altar-consecrated.webp",
+    "sha256": "e63b7ba331f0cb286bb44c8286e19f017bdcedc5c997781e0018d516139ded03",
+    "bytes": 188568
+  },
+  {
+    "path": "dist/assets/altar-demon.webp",
+    "sha256": "461571494f903379130608c699a942b116d28585420a6d5ce1e945eacbcba29a",
+    "bytes": 151848
+  },
+  {
+    "path": "dist/assets/altar-neutral.webp",
+    "sha256": "ae294817163812b46d5c36f96da55509c046dafd89ad5d0ff107f826d5db1eda",
+    "bytes": 170728
+  },
+  {
+    "path": "dist/assets/altar-undead.webp",
+    "sha256": "1924de3645d2a5373876b9be947249efc0ee3f424523590703d2e86d07b861ea",
+    "bytes": 172850
+  },
+  {
+    "path": "dist/assets/artifact-crown.webp",
+    "sha256": "81bdead43a0f87abd4ccf6f53471e22f0879b931ebb794de8d9ae61db49799d0",
+    "bytes": 97690
+  },
+  {
+    "path": "dist/assets/artifact-eye.webp",
+    "sha256": "7189d99c4e8544fb6470c84bb5be380e16a2bb056a4249397ddb5b8d94fed203",
+    "bytes": 98548
+  },
+  {
+    "path": "dist/assets/boss-dragon.webp",
+    "sha256": "fcce9f9341d0a950d81bfb1aad9d86359d62bfbcb1357bc3f55df11912188a87",
+    "bytes": 138878
+  },
+  {
+    "path": "dist/assets/boss-giant.webp",
+    "sha256": "775c29c1a56a8ddab74d385c7ed3ebe1429f6148a19038b88666d0a62b42e381",
+    "bytes": 146058
+  },
+  {
+    "path": "dist/assets/boss-knight.webp",
+    "sha256": "8ce28678b214eebd5b922319bb4209ed065a8c86bd8d0da0c902f0455e65bb2d",
+    "bytes": 143304
+  },
+  {
+    "path": "dist/assets/gear-amulet.webp",
+    "sha256": "5e87ed179f58707360349faad021c9a13ae7d50fd70487af89998499e0d228da",
+    "bytes": 15976
+  },
+  {
+    "path": "dist/assets/gear-body.webp",
+    "sha256": "ba789db09301888073530901a29fdd5e622e3f76b118075025544e36ed5b4faa",
+    "bytes": 15398
+  },
+  {
+    "path": "dist/assets/gear-boots.webp",
+    "sha256": "3e6bb587b8c3d5198d3cde0952dfaee7f7a1683a6faab1f2900f2fecc13031ca",
+    "bytes": 12930
+  },
+  {
+    "path": "dist/assets/gear-head.webp",
+    "sha256": "63efdcdab8c572b20a4c9f50ea971d670614237be70ed21636d5b94038a5aeb9",
+    "bytes": 15494
+  },
+  {
+    "path": "dist/assets/gear-ring.webp",
+    "sha256": "b8f7855b8303bcce3a9f8e256a22a6f68067bd23cda09f915ddd5853d26a5341",
+    "bytes": 17810
+  },
+  {
+    "path": "dist/assets/gear-weapon.webp",
+    "sha256": "9254f412dd9279716afd895d8140beeea3204cca6358c42569005150aedf44b1",
+    "bytes": 9208
+  },
+  {
+    "path": "dist/assets/hero-0.webp",
+    "sha256": "07f41b5dda74d7f134a8164c477fcfe9f3ef9dbb3aa820644e5cb85f7a94c6b9",
+    "bytes": 145570
+  },
+  {
+    "path": "dist/assets/hero-1.webp",
+    "sha256": "b3c9e57b78724ecf7efa2629ea866d7dcb1688a75e7bf18016838555191997b3",
+    "bytes": 161004
+  },
+  {
+    "path": "dist/assets/hero-2.webp",
+    "sha256": "d5647438c2621e78d31373d7af8d49ac34479a8f48aae1511db8ccd4a2060666",
+    "bytes": 140822
+  },
+  {
+    "path": "dist/assets/hero-3.webp",
+    "sha256": "4a6954fc30efacfcab50eae7c5e523b3890ddea8a2bab5a84b8ba85a66234395",
+    "bytes": 158850
+  },
+  {
+    "path": "dist/assets/mob-gargoyle.webp",
+    "sha256": "c10806ce0b3c34b15401a0587ca60095da9985d60798350ef6cc759b8fd53586",
+    "bytes": 147710
+  },
+  {
+    "path": "dist/assets/mob-golem.webp",
+    "sha256": "5d0870de599c7094d334ccbf5b42bae1c4913dc9ac230c393dcf109214c96126",
+    "bytes": 73078
+  },
+  {
+    "path": "dist/assets/mob-raider.webp",
+    "sha256": "21dd35bf06ac2adffaf7b0b4689462e32ff0aff7af42eedf6b5b48e3337b0271",
+    "bytes": 69630
+  },
+  {
+    "path": "dist/assets/mob-spider.webp",
+    "sha256": "214e0f3a440b89814ac2084e179a50610d90c242c313c2ba155b1ef51aac8146",
+    "bytes": 74146
+  },
+  {
+    "path": "dist/assets/mob-wolf.webp",
+    "sha256": "db5d54f1f4921e0613e0393bcfcfa87dc1991bb3af23f34b239b646ce4c35dfe",
+    "bytes": 80324
+  },
+  {
+    "path": "dist/assets/mob-wraith.webp",
+    "sha256": "cf2ef856ed3ad7e03231051a364c2d88b02e59d62247167d26bf3120f9cc3907",
+    "bytes": 142332
+  },
+  {
+    "path": "dist/assets/npc-chief.webp",
+    "sha256": "ac74d1ebd0a51f77cbd113033694cdd0def5833d035b1d788b96d4fdd26c7a01",
+    "bytes": 90980
+  },
+  {
+    "path": "dist/assets/npc-merchant.webp",
+    "sha256": "c80f02843b5cfed2b1fbfaf48c594f27e64aa3d5fe081c1ab64509a4fd9ee1d7",
+    "bytes": 103130
+  },
+  {
+    "path": "dist/assets/place-ruins.webp",
+    "sha256": "0ab5f4a4e5a943246e252c466b0e2e245f9ad0033114c45408c702a72c1bfe54",
+    "bytes": 172896
+  },
+  {
+    "path": "dist/assets/place-settlement.webp",
+    "sha256": "5d85e75313f84f4005407c9cd6e8b0bde47f51ade39defbd342ab85b899dc330",
+    "bytes": 160596
+  },
+  {
+    "path": "dist/assets/rare-armor.webp",
+    "sha256": "61b98413cb4790ac090b679248d97b07880c384914eec6427ea34fe4311e3d67",
+    "bytes": 107944
+  },
+  {
+    "path": "dist/assets/rare-staff.webp",
+    "sha256": "157eb8a02b63fdd69e78b6a72ec923be4b05a45525cf7792a9aef58ffc926685",
+    "bytes": 35262
+  }
+]

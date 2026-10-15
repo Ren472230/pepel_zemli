@@ -1,0 +1,12 @@
+{
+  "name": "pepel-zemli",
+  "version": "0.10.0",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node scripts/test.cjs",
+    "audit": "node scripts/audit.cjs"
+  }
+}
