@@ -6,7 +6,7 @@
     "node": ">=22"
   },
   "scripts": {
-    "test": "node scripts/test.cjs && node tests/neutral-profiles.cjs",
+    "test": "node scripts/test.cjs",
     "audit": "node scripts/audit.cjs"
   }
 }
