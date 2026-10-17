@@ -1,54 +1,41 @@
 {
-  "date": "2026-10-15",
-  "commit": "81d95d99a89bb289065f53a1d0e6337878b0ab14",
-  "workingTree": "выпущено в main через PR #1, публикация Sites отдельно",
-  "source": "GitHub Actions, коммит 81d95d9",
+  "date": "2026-10-17",
+  "version": "0.10.0",
+  "baseCommit": "33d50aa0ce54ab4ceebf93498e5eff858c47210d",
+  "verifiedCodeCommit": "80248e76c1281d6a6ae709eefb209df43721940d",
+  "branch": "autonomy/2026-10-17-neutral-profiles",
+  "pullRequest": "https://github.com/Ren472230/pepel_zemli/pull/6",
+  "method": "GitHub Actions npm test, npm run audit and Node DOM stub; no authenticated browser",
   "checks": [
     {
-      "name": "Автоматические проверки",
-      "status": "Подтверждено проверкой",
-      "evidence": "npm test + npm run audit: https://github.com/Ren472230/pepel_zemli/actions/runs/38708286303",
-      "output": "Геймплейные и регрессионные проверки успешны; 8 многоходовых боёв, 25 сценариев аудита, тест мобильной карты"
+      "name": "COMBAT-001 red test",
+      "result": "expected failure",
+      "url": "https://github.com/Ren472230/pepel_zemli/actions/runs/39004175439"
     },
     {
-      "name": "Целостность изображений",
-      "status": "Подтверждено проверкой",
-      "count": 115,
+      "name": "Intermediate regression",
+      "result": "failure and fixed",
+      "url": "https://github.com/Ren472230/pepel_zemli/actions/runs/39004392113"
+    },
+    {
+      "name": "npm test",
+      "result": "passed",
+      "url": "https://github.com/Ren472230/pepel_zemli/actions/runs/39004463474"
+    },
+    {
+      "name": "npm run audit",
+      "result": "passed",
+      "assets": 115,
       "missing": [],
       "changed": [],
-      "evidence": "GitHub Actions, npm run audit: 115 файлов; missing [], changed []"
+      "url": "https://github.com/Ren472230/pepel_zemli/actions/runs/39004463474"
     },
     {
-      "name": "Доступность мобильной карты (CSS)",
-      "status": "Подтверждено проверкой",
-      "evidence": "Тест падал до исправления, проходит после. Минимум 44x44 CSS px + горизонтальная прокрутка"
-    },
-    {
-      "name": "Интерфейс телефона в браузере",
-      "status": "Требует проверки",
-      "evidence": "Внешний доступ к Sites остановлен экраном входа ChatGPT"
-    },
-    {
-      "name": "Интерфейс компьютера в браузере",
-      "status": "Требует проверки",
-      "evidence": "Нужен запуск игры в аутентифицированном браузере"
-    },
-    {
-      "name": "Длительный баланс",
-      "status": "Требует проверки",
-      "evidence": "Действительные 10-15 дней за четыре расы не проверены"
-    },
-    {
-      "name": "Удовольствие от игры",
-      "status": "Требует проверки",
-      "evidence": "Нет данных реального игрока версии 0.10.0"
-    },
-    {
-      "name": "Исследование аналогов",
-      "status": "Подтверждено проверкой",
-      "evidence": "docs/research/2026-10-15.md: Battle Brothers, Wartales, Wesnoth по официальным источникам"
+      "name": "Browser visuals, input and play balance",
+      "result": "not tested"
     }
   ],
-  "nextTask": "COMBAT-001",
-  "release": "GitHub обновлён; Sites не публиковался"
+  "nextTask": "GAME-001",
+  "report": "docs/audits/2026-10-17-cycle-02.md",
+  "sitesPublication": "not attempted"
 }
