@@ -7,7 +7,21 @@ const passiveNames=['Стойкость: −15% физического урон�
 let timer=null,tab='map',battleAction='attack',pendingWorldEvent=null;
 function prepareDefs(){defs.forEach(d=>{d.tier=d.level;d.size=1;let branch=Number(d.id.split('-')[2]);d.category=Number.isInteger(d.combatClass)?d.combatClass:d.role===0?(branch===1?1:0):d.role===1?2:d.race===2&&branch===1?5:d.race===1&&branch!==1?3:d.race<2&&branch===1?3:d.race===3&&branch===1?3:4;});}
 function readyEvolve(u){return u.tier<3&&u.level>=(u.tier===1?6:11);}
-function stats(u,keep=false){let pct=keep?u.hp/u.max:1,base=[[66,9,8,5],[53,14,3,7],[40,14,1,9],[35,9,0,6],[43,4,2,6],[40,7,1,5]][u.category],l=u.level||1,t=u.tier||1;u.max=Math.round((base[0]+(l-1)*(u.category<2?6:4))*(1+.2*(t-1)));u.atk=Math.round((base[1]+(l-1)*(u.category===1||u.category===2?2:1))*(1+.2*(t-1)));u.armor=base[2]+Math.floor(l/3);u.speed=base[3]+Math.floor(l/5);u.maxMana=20+l*2;u.mana=Math.min(u.mana??u.maxMana,u.maxMana);if(u.neutral){u.max=Math.round(u.max*.65);u.atk=Math.max(4,Math.round(u.atk*.85));u.armor=Math.min(u.armor,2+Math.floor(l/4));}u.hp=Math.max(0,Math.round(u.max*pct));u.healPower=Math.round((12+l*2)*(u.race===1||u.race===2?.8:1));u.intercept=u.intercept??2;u.effects??={};u.perfection??=0;u.buffs??=[];u.cooldowns??={};u.size=1;u.cost=u.tier===3&&u.category<2?2:1;if(u.betrayed){u.max=Math.round(u.max*1.25);u.atk=Math.round(u.atk*1.25);u.hp=Math.round(u.max*pct);}}
+// COMBAT-001: distinct combat silhouettes for existing neutral species.
+const neutralCombatProfiles=Object.freeze({
+ 'mob-raider':{category:1,health:1,attack:1,armor:0,speed:0},
+ 'mob-wolf':{category:1,health:.9,attack:1,armor:0,speed:2},
+ 'mob-spider':{category:2,health:.88,attack:.9,armor:0,speed:1},
+ 'mob-golem':{category:0,health:1.12,attack:.85,armor:1,speed:-2},
+ 'mob-gargoyle':{category:1,health:1.08,attack:.95,armor:1,speed:0},
+ 'mob-wraith':{category:3,health:1,attack:1,armor:0,speed:0}
+});
+function stats(u,keep=false){const profile=u.neutral?neutralCombatProfiles[u.id]:null;if(profile)u.category=profile.category;let pct=keep?u.hp/u.max:1,base=[[66,9,8,5],[53,14,3,7],[40,14,1,9],[35,9,0,6],[43,4,2,6],[40,7,1,5]][u.category],l=u.level||1,t=u.tier||1;u.max=Math.round((base[0]+(l-1)*(u.category<2?6:4))*(1+.2*(t-1)));u.atk=Math.round((base[1]+(l-1)*(u.category===1||u.category===2?2:1))*(1+.2*(t-1)));u.armor=base[2]+Math.floor(l/3);u.speed=base[3]+Math.floor(l/5);u.maxMana=20+l*2;u.mana=Math.min(u.mana??u.maxMana,u.maxMana);if(u.neutral){u.max=Math.round(u.max*.65);u.atk=Math.max(4,Math.round(u.atk*.85));u.armor=Math.min(u.armor,2+Math.floor(l/4));if(profile){u.max=Math.max(1,Math.round(u.max*profile.health));u.atk=Math.max(1,Math.round(u.atk*profile.attack));u.armor=Math.max(0,u.armor+profile.armor);u.speed=Math.max(1,u.speed+profile.speed);}}u.hp=Math.max(0,Math.round(u.max*pct));u.healPower=Math.round((12+l*2)*(u.race===1||u.race===2?.8:1));u.intercept=u.intercept??2;u.effects??={};u.perfection??=0;u.buffs??=[];u.cooldowns??={};u.size=1;u.cost=u.tier===3&&u.category<2?2:1;if(u.betrayed){u.max=Math.round(u.max*1.25);u.atk=Math.round(u.atk*1.25);u.hp=Math.round(u.max*pct);}}
+// Keep the original standalone HTML factories usable without expansion.js.
+// The advanced rule layer applies species profiles after assigning neutral identity.
+const originalNeutralFactory=neutralEnemy, originalRuinFactory=ruinEnemy;
+neutralEnemy=function(){const u=originalNeutralFactory();stats(u);return u;};
+ruinEnemy=function(){const u=originalRuinFactory();stats(u);return u;};
 unit=function(id,enemy=false){let d=defs.find(x=>x.id===id);if(!d)throw Error('Unknown unit '+id);let u={...d,uid:crypto.randomUUID(),tier:d.tier,level:1,xp:0,enemy,hp:1,max:1};stats(u);return u;};
 function gearNormalize(g){g.rarity=g.rarity==='Артефакт'?'Мифический':g.rarity||'Обычный';g.stat??=g.slot.includes('рука')?'attack':g.slot==='Шея'?'magic':g.slot.startsWith('Кольцо')?'crit':'armor';g.durability??=20;if(!g.image&&g.rarity==='Редкий')g.image=g.stat==='magic'?'rare-staff':g.stat==='armor'?'rare-armor':'gear-weapon';if(!g.image&&g.rarity==='Мифический')g.image=[0,1].includes(g.race??S.race)?'artifact-crown':'artifact-eye';if(g.rarity==='Мифический'){g.race??=S.race;g.condition??=['Три победы без потерь','Три призыва','Три убийства после кровавого навыка','Пять очищений'][g.race];g.progress??=0;g.goal??=[3,3,3,5][g.race];}return g;}
 function migrate(){
