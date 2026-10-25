@@ -99,7 +99,7 @@ for (const race of [0, 1, 2, 3]) {
     // These wounds are imposed by the test, not caused by the generated battle.
     const forcedLossFixture = seed === 42;
     if (forcedLossFixture) {
-      run('S.units[0].hp=0;S.units[1].hp=Math.max(1,Math.floor(S.units[1].max/2));S.hero.hp=Math.max(1,S.hero.hp-10)');
+      run('S.units[0].hp=0;if(S.units[1].hp>0)S.units[1].hp=Math.max(1,Math.min(S.units[1].hp,Math.floor(S.units[1].max/2)));S.hero.hp=Math.max(1,S.hero.hp-10)');
     }
     const beforeRecovery = JSON.parse(run('JSON.stringify({gold:S.gold,junk:S.junk,food:S.provisions,dead:S.units.filter(u=>u.hp<=0).length,wounded:S.units.filter(u=>u.hp>0&&u.hp<u.max).length,heroInjured:S.hero.hp<S.hero.max})'));
     if (beforeRecovery.junk > 0) run('sellJunk();modalClose()');
@@ -128,7 +128,8 @@ for (const race of [0, 1, 2, 3]) {
       (healing ? 25 : 0) - (supplyPurchased ? 10 : 0),
       label + ': exact settlement recovery costs');
     if (forcedLossFixture) {
-      assert.equal(revivals, 1, label + ': controlled dead unit revived');
+      assert(beforeRecovery.dead >= 1, label + ': controlled death exists');
+      assert.equal(revivals, beforeRecovery.dead, label + ': all natural and controlled dead units revived');
       assert(healing, label + ': controlled injury healed');
     }
     assert(afterRecovery.alive === 3, label + ': all hired units available again');
