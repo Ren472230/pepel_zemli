@@ -4,7 +4,7 @@
   "baseCommit": "0b10ec131443e7758ec52b89f02acaea10acba05",
   "verifiedCodeCommit": "eac7d59a51805db35fa6155ea3ad6a0038e95c1c",
   "branch": "autonomy/2026-10-25-cycle-12-natural-losses",
-  "pullRequest": null,
+  "pullRequest": "https://github.com/Ren472230/pepel_zemli/pull/13",
   "report": "docs/audits/2026-10-25-cycle-12.md",
   "method": "GitHub Actions Node VM + mocked DOM; natural generated patrols; no real browser and no independent second agent",
   "checks": [
@@ -40,5 +40,10 @@
   ],
   "nextTask": "GAME-001 compare weak and three-hire policies with same seeds; actual browser acceptance remains open",
   "sitesPublication": "not attempted",
-  "integratedInMain": false
+  "integratedInMain": true,
+  "mergePullRequest": "https://github.com/Ren472230/pepel_zemli/pull/13",
+  "mergeCommit": "24718db33928488741b66daff48553ac444af0e5",
+  "mergeChecksUrl": "https://github.com/Ren472230/pepel_zemli/actions/runs/40169692341",
+  "mergeChecksResult": "passed",
+  "offlineBuildUrl": "https://github.com/Ren472230/pepel_zemli/actions/runs/40169692329"
 }
