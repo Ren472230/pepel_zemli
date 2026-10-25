@@ -48,7 +48,7 @@ function finishDangerousBattle(h, run, label) {
       run('modalClose()');
     } else if (run('Boolean(canAct())')) {
       run("var a=canAct(),foe=frontline(B.enemies)[0];" +
-        "if(a.hero&&S.units.some(u=>u.hp>0)){guard();}" +
+        "if(a.hero&&S.units.some(u=>u.hp>0)&&B.round<=4){guard();}" +
         "else if(a.hero&&a.hp<a.max*.55&&S.potions>0){potion(false);}" +
         "else if(foe){chooseAction('attack');target(foe.uid)}else guard();");
     } else {
@@ -56,6 +56,7 @@ function finishDangerousBattle(h, run, label) {
     }
   }
   naturallyDead = Math.max(naturallyDead, run('S.units.filter(u=>u.hp<=0).length'));
+  if (run('Boolean(B)')) console.log('GAME-001 unfinished battle', label, run('JSON.stringify({round:B.round,phase:B.phase,current:B.current,queue:B.queue.length,potions:S.potions,hero:S.hero.hp,units:S.units.map(u=>({hp:u.hp,max:u.max,category:u.category})),enemies:B.enemies.map(u=>({hp:u.hp,max:u.max,category:u.category})),event:S.event?.index})'), 'pendingTimers=' + h.tasks.size);
   assert(actions < 900 && !run('Boolean(B)'), label + ': combat resolves without deadlock');
   closeInterruptions(run);
   return { actions, naturallyDead };
