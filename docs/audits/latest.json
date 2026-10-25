@@ -1,45 +1,44 @@
 {
   "date": "2026-10-25",
   "version": "0.10.0",
-  "baseCommit": "3ec80cc95e460f5970a79ab716e2ba03c166097d",
-  "verifiedCodeCommit": "41305d5c276a5ab8074649a8dba4dbdaeafb8148",
-  "branch": "autonomy/2026-10-25-cycle-11-real-encounters",
+  "baseCommit": "0b10ec131443e7758ec52b89f02acaea10acba05",
+  "verifiedCodeCommit": "eac7d59a51805db35fa6155ea3ad6a0038e95c1c",
+  "branch": "autonomy/2026-10-25-cycle-12-natural-losses",
   "pullRequest": null,
-  "report": "docs/audits/2026-10-25-cycle-11.md",
-  "method": "GitHub Actions Node VM + DOM stub; generated-map patrols and separately forced recovery fixture; no real browser",
+  "report": "docs/audits/2026-10-25-cycle-12.md",
+  "method": "GitHub Actions Node VM + mocked DOM; natural generated patrols; no real browser and no independent second agent",
   "checks": [
     {
-      "name": "12 natural generated-map encounters",
-      "result": "passed",
-      "naturalWins": 12,
-      "realBattleCasualties": 0,
-      "url": "https://github.com/Ren472230/pepel_zemli/actions/runs/40167199903"
+      "name": "Red regression: all-passive healers",
+      "result": "failed as expected before fix",
+      "url": "https://github.com/Ren472230/pepel_zemli/actions/runs/40169121680"
     },
     {
-      "name": "4 forced death/injury recovery fixtures",
+      "name": "24 generated difficult battles with one hired archer",
       "result": "passed",
-      "reviveCost": 60,
-      "healCost": 25,
-      "url": "https://github.com/Ren472230/pepel_zemli/actions/runs/40167199903"
+      "battles": 24,
+      "naturallyFallenScenarios": 19,
+      "playerHeroDeaths": 15,
+      "realRecoveryScenarios": 4,
+      "url": "https://github.com/Ren472230/pepel_zemli/actions/runs/40169432124"
+    },
+    {
+      "name": "Previous 12 full-squad patrol routes",
+      "result": "passed",
+      "url": "https://github.com/Ren472230/pepel_zemli/actions/runs/40169432124"
     },
     {
       "name": "npm test and npm run audit",
       "result": "passed",
       "assets": 115,
-      "missing": [],
-      "changed": [],
-      "url": "https://github.com/Ren472230/pepel_zemli/actions/runs/40167199903"
+      "url": "https://github.com/Ren472230/pepel_zemli/actions/runs/40169432124"
     },
     {
-      "name": "Real browser and real-player play",
+      "name": "Real browser and player enjoyment",
       "result": "not tested"
     }
   ],
-  "nextTask": "GAME-001 natural hard encounters and actual casualties",
+  "nextTask": "GAME-001 compare weak and three-hire policies with same seeds; actual browser acceptance remains open",
   "sitesPublication": "not attempted",
-  "mergeCommit": "9e7bbef5401be4d59fb40f749d8a7c4151f89abd",
-  "mergePullRequest": "https://github.com/Ren472230/pepel_zemli/pull/11",
-  "mergeChecksUrl": "https://github.com/Ren472230/pepel_zemli/actions/runs/40167405204",
-  "mergeChecksResult": "passed",
-  "integratedInMain": true
+  "integratedInMain": false
 }
