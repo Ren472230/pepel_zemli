@@ -1,41 +1,40 @@
 {
-  "date": "2026-10-17",
+  "date": "2026-10-25",
   "version": "0.10.0",
-  "baseCommit": "33d50aa0ce54ab4ceebf93498e5eff858c47210d",
-  "verifiedCodeCommit": "80248e76c1281d6a6ae709eefb209df43721940d",
-  "branch": "autonomy/2026-10-17-neutral-profiles",
-  "pullRequest": "https://github.com/Ren472230/pepel_zemli/pull/6",
-  "method": "GitHub Actions npm test, npm run audit and Node DOM stub; no authenticated browser",
+  "baseCommit": "3ec80cc95e460f5970a79ab716e2ba03c166097d",
+  "verifiedCodeCommit": "41305d5c276a5ab8074649a8dba4dbdaeafb8148",
+  "branch": "autonomy/2026-10-25-cycle-11-real-encounters",
+  "pullRequest": null,
+  "report": "docs/audits/2026-10-25-cycle-11.md",
+  "method": "GitHub Actions Node VM + DOM stub; generated-map patrols and separately forced recovery fixture; no real browser",
   "checks": [
     {
-      "name": "COMBAT-001 red test",
-      "result": "expected failure",
-      "url": "https://github.com/Ren472230/pepel_zemli/actions/runs/39004175439"
-    },
-    {
-      "name": "Intermediate regression",
-      "result": "failure and fixed",
-      "url": "https://github.com/Ren472230/pepel_zemli/actions/runs/39004392113"
-    },
-    {
-      "name": "npm test",
+      "name": "12 natural generated-map encounters",
       "result": "passed",
-      "url": "https://github.com/Ren472230/pepel_zemli/actions/runs/39004463474"
+      "naturalWins": 12,
+      "realBattleCasualties": 0,
+      "url": "https://github.com/Ren472230/pepel_zemli/actions/runs/40167199903"
     },
     {
-      "name": "npm run audit",
+      "name": "4 forced death/injury recovery fixtures",
+      "result": "passed",
+      "reviveCost": 60,
+      "healCost": 25,
+      "url": "https://github.com/Ren472230/pepel_zemli/actions/runs/40167199903"
+    },
+    {
+      "name": "npm test and npm run audit",
       "result": "passed",
       "assets": 115,
       "missing": [],
       "changed": [],
-      "url": "https://github.com/Ren472230/pepel_zemli/actions/runs/39004463474"
+      "url": "https://github.com/Ren472230/pepel_zemli/actions/runs/40167199903"
     },
     {
-      "name": "Browser visuals, input and play balance",
+      "name": "Real browser and real-player play",
       "result": "not tested"
     }
   ],
-  "nextTask": "GAME-001",
-  "report": "docs/audits/2026-10-17-cycle-02.md",
+  "nextTask": "GAME-001 natural hard encounters and actual casualties",
   "sitesPublication": "not attempted"
 }
