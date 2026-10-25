@@ -22,6 +22,7 @@ function battle(h, run, label) {
       h.drain(1);
     }
   }
+  if (run('Boolean(B)')) console.log('GAME-001 patrol-battle stall',label,run('JSON.stringify({round:B.round,phase:B.phase,current:B.current,queue:B.queue.length,enemies:B.enemies.map(u=>({id:u.id,category:u.category,hp:u.hp,max:u.max,mana:u.mana})),units:S.units.map(u=>({id:u.id,category:u.category,hp:u.hp,max:u.max,mana:u.mana})),hero:{hp:S.hero.hp,mana:S.hero.mana}})'));
   assert(steps < 650 && !run('Boolean(B)'), label + ': battle must finish');
   assert(run('!S.ended && S.hero.hp > 0'), label + ': hero survives');
   run('if(isModalOpen())modalClose()');
