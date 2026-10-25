@@ -94,6 +94,12 @@ for (const race of [0, 1, 2, 3]) {
     assert.equal(run('S.pos'), 0, label + ': returned to first settlement');
     assert(encounters >= 1, label + ': fought a generated patrol');
 
+    // Fixed loss fixture on seed 42: exercise actual revival and healing prices.
+    // These wounds are imposed by the test, not caused by the generated battle.
+    const forcedLossFixture = seed === 42;
+    if (forcedLossFixture) {
+      run('S.units[0].hp=0;S.units[1].hp=Math.max(1,Math.floor(S.units[1].max/2));S.hero.hp=Math.max(1,S.hero.hp-10)');
+    }
     const beforeRecovery = JSON.parse(run('JSON.stringify({gold:S.gold,junk:S.junk,food:S.provisions,dead:S.units.filter(u=>u.hp<=0).length,wounded:S.units.filter(u=>u.hp>0&&u.hp<u.max).length,heroInjured:S.hero.hp<S.hero.max})'));
     if (beforeRecovery.junk > 0) run('sellJunk();modalClose()');
     let revivals = 0;
@@ -114,7 +120,16 @@ for (const race of [0, 1, 2, 3]) {
         label + ': hospital recovery');
     }
     if (run('S.provisions < 24')) run("buy('supply');modalClose()");
+    const supplyPurchased = run('S.provisions') > beforeRecovery.food;
     const afterRecovery = JSON.parse(run('JSON.stringify({gold:S.gold,food:S.provisions,alive:S.units.filter(u=>u.hp>0).length})'));
+    assert.equal(afterRecovery.gold,
+      beforeRecovery.gold + beforeRecovery.junk * 3 - revivals * 60 -
+      (healing ? 25 : 0) - (supplyPurchased ? 10 : 0),
+      label + ': exact settlement recovery costs');
+    if (forcedLossFixture) {
+      assert.equal(revivals, 1, label + ': controlled dead unit revived');
+      assert(healing, label + ': controlled injury healed');
+    }
     assert(afterRecovery.alive === 3, label + ': all hired units available again');
 
     while (moves < 14) step(run('S.pos') === 0 ? 1 : 0);
@@ -129,7 +144,7 @@ for (const race of [0, 1, 2, 3]) {
     console.log('GAME-001 generated patrol', JSON.stringify({
       race, seed, naturalEncounters: encounters,
       victories: run('S.victories') - initialWins, beforeRecovery,
-      afterRecovery, revivals, healing, days: 15,
+      afterRecovery, revivals, healing, forcedLossFixture, days: 15,
       hunger: run('S.hunger'), gold: run('S.gold'),
       food: run('S.provisions'), rivalAlive: run('S.rival.alive')
     }));
