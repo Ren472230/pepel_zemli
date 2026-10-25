@@ -88,8 +88,10 @@ for (const race of [0, 1, 2, 3]) {
       'JSON.stringify({day:S.day,heroHp:S.hero.hp,fighterHp:S.units[0].hp,gold:S.gold,food:S.provisions,won:S.victories})'));
     run('fight()');
     assert(run('Boolean(B)'), label + ': actual generated patrol battle begins');
-    const enemies = JSON.parse(run('JSON.stringify(B.enemies.map(u=>({id:u.id,level:u.level,max:u.max})))'));
+    const enemies = JSON.parse(run('JSON.stringify(B.enemies.map(u=>({id:u.id,race:u.race,category:u.category,level:u.level,max:u.max})))'));
     assert(enemies.length >= 2, label + ': genuinely difficult multi-enemy patrol');
+    assert(enemies.some(u=>u.category!==4||![0,3].includes(u.race)),
+      label + ': generated hostile patrol needs at least one fighter who can inflict damage; got '+JSON.stringify(enemies));
     const fight = finishDangerousBattle(h, run, label);
     const victory = run('S.victories') === beforeCombat.won + 1;
     const heroAlive = run('S.hero.hp > 0 && !S.ended');
