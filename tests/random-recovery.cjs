@@ -9,6 +9,7 @@ const route = [1, 2, 10, 9, 1, 0, 8, 16, 17, 18, 10, 9, 1, 0, 8];
 const seeds = [1, 7, 19, 42, 101, 2026];
 
 for (const race of [0, 1, 2, 3]) {
+  const distinctMaps = new Set();
   for (const seed of seeds) {
     const h = harness();
     const run = h.run;
@@ -22,6 +23,7 @@ for (const race of [0, 1, 2, 3]) {
     run(`start(${race})`);
 
     const map = JSON.parse(run('JSON.stringify(S.map)'));
+    distinctMaps.add(map.map(t => [t.type, t.boss || '', t.relic?.race ?? -1].join(':')).join('|'));
     assert.equal(map.length, 64, 'world size');
     assert.equal(map.filter(t => t.type === 5).length, 3, 'fixed settlements');
     assert.equal(map.filter(t => t.boss).length, 3, 'three bosses');
@@ -71,5 +73,6 @@ for (const race of [0, 1, 2, 3]) {
       food: run('S.provisions'), hunger: run('S.hunger')
     }));
   }
+  assert.equal(distinctMaps.size, seeds.length, `race ${race}: independent random-world layouts`);
 }
 console.log('PASS 24 generated-map capitulation recovery models; player strategy and real-browser play untested.');
