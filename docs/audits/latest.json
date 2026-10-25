@@ -36,5 +36,10 @@
     }
   ],
   "nextTask": "GAME-001 natural hard encounters and actual casualties",
-  "sitesPublication": "not attempted"
+  "sitesPublication": "not attempted",
+  "mergeCommit": "9e7bbef5401be4d59fb40f749d8a7c4151f89abd",
+  "mergePullRequest": "https://github.com/Ren472230/pepel_zemli/pull/11",
+  "mergeChecksUrl": "https://github.com/Ren472230/pepel_zemli/actions/runs/40167405204",
+  "mergeChecksResult": "passed",
+  "integratedInMain": true
 }
