@@ -58,9 +58,9 @@ function attempt(race, seed, prepared, options = {}) {
   assert(run('S.rival.alive'),label+' rival active');
   const world = JSON.parse(run('JSON.stringify(S.map.map(t=>({type:t.type,boss:t.boss||null})))'));
   const candidates = world.map((t,i)=>t.type===1?i:-1)
-    .filter(i=>i>=0&&distance(i)>=5&&distance(i)<=7)
+    .filter(i=>i>=0 && (options.nearestPatrol ? distance(i)>=1 : (distance(i)>=5&&distance(i)<=7)))
     .sort((a,b)=>distance(a)-distance(b)||a-b);
-  assert(candidates.length,label+' distant patrol exists');
+  assert(candidates.length,label+' selected patrol exists');
   const patrol = candidates[0], outward = route(patrol);
   if (prepared) {
     for(let i=0;i<3;i++)run("hire('"+race+"-"+i+"')");
