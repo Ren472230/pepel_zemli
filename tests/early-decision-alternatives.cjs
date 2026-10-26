@@ -43,6 +43,24 @@ for (const item of flagged) {
     guardFirstTwoRounds:snapshot(early),
     heroAttacksImmediately:snapshot(active)});
 }
+// Separate decision: choose the closest generated patrol instead of the
+// distant high-risk encounter. This deliberately changes the encounter,
+// so only map and race/seed are compared, not the enemy composition.
+for (const race of [0,3]) {
+  const label='race '+race+', seed 2026';
+  const far=baselines.get(label);
+  const near=attempt(race,2026,true,{nearestPatrol:true,heroGuardRounds:2});
+  assert.equal(near.map,far.map,label+': nearest alternative uses same generated map');
+  const distance=i=>i%8+Math.floor(i/8);
+  assert(distance(near.patrol)<=distance(far.patrol),
+    label+': chosen encounter is at least as close');
+  console.log('GAME-001 patrol distance choice',JSON.stringify({
+    race,seed:2026,farPatrol:far.patrol,nearPatrol:near.patrol,
+    farDistance:distance(far.patrol),nearDistance:distance(near.patrol),
+    farBaseline:snapshot(far),nearPolicy:snapshot(near),
+    note:'enemy generation may differ with encounter; route/timing and RNG are not isolated'
+  }));
+}
 // A small, player-controlled resource choice: preserve >=20 gold after
 // discretionary spending when the survivor returns to the settlement.
 // It may leave fighters unrevived or wounds untreated. Treat that as a cost.
