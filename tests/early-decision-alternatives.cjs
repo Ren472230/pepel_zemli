@@ -36,6 +36,15 @@ for (const item of flagged) {
   assert.equal(base.heroAlive,item.previousHeroAlive,label+': reproduce cycle-13 survival');
   if(item.previousGold!==undefined) assert.equal(base.final.gold,item.previousGold,
     label+': reproduce cycle-13 end gold');
+  // Stable acceptance fixtures: this is a seeded regression, not a promise
+  // that every random world or every player policy will win.
+  if (item.race===0 && item.seed===2026)
+    assert(early.heroAlive && early.day15,
+      label+': shorter hero defense rescues this seeded human scenario');
+  if (item.race===3 && item.seed===7)
+    assert(early.heroAlive && early.day15 && early.final.gold>=20 &&
+      early.final.living===3,
+      label+': elves survive with three fighters and cash reserve under two-round defense');
   baselines.set(label,base);
   records.push({race:item.race,seed:item.seed,patrol:base.patrol,
     enemyIds:base.enemies.map(e=>e.id),
@@ -54,8 +63,11 @@ for (const race of [0,3]) {
   const distance=i=>i%8+Math.floor(i/8);
   assert(distance(near.patrol)<=distance(far.patrol),
     label+': chosen encounter is at least as close');
+  assert(near.heroAlive && near.day15 && near.final.living===3,
+    label+': nearby patrol yields a viable 15-day continuation in this fixed seed');
   console.log('GAME-001 patrol distance choice',JSON.stringify({
     race,seed:2026,farPatrol:far.patrol,nearPatrol:near.patrol,
+    farEnemies:far.enemies.map(e=>e.id),nearEnemies:near.enemies.map(e=>e.id),
     farDistance:distance(far.patrol),nearDistance:distance(near.patrol),
     farBaseline:snapshot(far),nearPolicy:snapshot(near),
     note:'enemy generation may differ with encounter; route/timing and RNG are not isolated'
