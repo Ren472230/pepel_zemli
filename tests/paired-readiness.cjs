@@ -31,7 +31,7 @@ function step(run, i, label) {
   settleInterruptions(run);
   assert(run('S.gold>=0 && S.provisions>=0'), label + ' nonnegative resources');
 }
-function battle(h, run, label) {
+function battle(h, run, label, heroGuardRounds = 4) {
   let actions = 0, maxDead = 0;
   while (run('Boolean(B)') && actions++ < 1200) {
     maxDead = Math.max(maxDead, run('S.units.filter(u=>u.hp<=0).length'));
@@ -41,7 +41,7 @@ function battle(h, run, label) {
         "if(a.category===4){" +
           "var hurt=[S.hero,...allies()].find(u=>u.hp>0&&u.hp<u.max);" +
           "if(hurt&&!abilityReason(a,4,'heal')){special();target(hurt.uid)}else focus();" +
-        "}else if(a.hero&&S.units.some(u=>u.hp>0)&&B.round<=4){guard();}" +
+        "}else if(a.hero&&S.units.some(u=>u.hp>0)&&B.round<="+heroGuardRounds+"){guard();}" +
         "else if(a.hero&&a.hp<a.max*.55&&S.potions>0){potion(false);}" +
         "else if(foe){chooseAction('attack');target(foe.uid)}else guard();");
     } else h.drain(1);
@@ -51,7 +51,7 @@ function battle(h, run, label) {
   settleInterruptions(run);
   return {actions, dead: Math.max(maxDead,run('S.units.filter(u=>u.hp<=0).length'))};
 }
-function attempt(race, seed, prepared) {
+function attempt(race, seed, prepared, options = {}) {
   const h = harness(), run = h.run, label = 'race '+race+' seed '+seed+' prepared '+prepared;
   reseed(run,seed);
   run('start('+race+')');
@@ -78,7 +78,7 @@ function attempt(race, seed, prepared) {
   const enemies = JSON.parse(run('JSON.stringify(B.enemies.map(u=>({id:u.id,race:u.race,category:u.category,level:u.level,max:u.max})))'));
   assert(enemies.length>=2,label+' generated multi-enemy patrol');
   assert(enemies.some(u=>u.category!==4||![0,3].includes(u.race)),label+' enemy has an attacker');
-  const result = battle(h,run,label);
+  const result = battle(h,run,label,options.heroGuardRounds ?? 4);
   const heroAlive = run('S.hero.hp>0 && !S.ended');
   const victory = run('S.victories') > before.victories;
   let revived = 0, healed = false, unaffordableDead = 0, townSpend = 0, day15 = false;
@@ -88,18 +88,18 @@ function attempt(race, seed, prepared) {
     assert.equal(run('S.pos'),0,label+' returned home');
     const town = JSON.parse(run('JSON.stringify({gold:S.gold,junk:S.junk,food:S.provisions,dead:S.units.filter(u=>u.hp<=0).length})'));
     if(town.junk>0)run('sellJunk();modalClose()');
-    while(run('S.units.some(u=>u.hp<=0)') && run('S.gold>=60')){
+    while(run('S.units.some(u=>u.hp<=0)') && run('S.gold>='+(60+(options.minReserve ?? 0)))){
       const beforeDead = run('S.units.filter(u=>u.hp<=0).length');
       run('revive();modalClose()');
       assert.equal(run('S.units.filter(u=>u.hp<=0).length'),beforeDead-1,label+' genuine revive');
       revived++;
     }
     unaffordableDead = run('S.units.filter(u=>u.hp<=0).length');
-    if(run('S.gold>=25&&(S.hero.hp<S.hero.max||S.units.some(u=>u.hp>0&&u.hp<u.max))')) {
+    if(run('S.gold>='+(25+(options.minReserve ?? 0))+'&&(S.hero.hp<S.hero.max||S.units.some(u=>u.hp>0&&u.hp<u.max))')) {
       run('heal();modalClose()');healed=true;
     }
     const foodBefore = run('S.provisions');
-    if(foodBefore<24&&run('S.gold>=10'))run("buy('supply');modalClose()");
+    if(foodBefore<24&&run('S.gold>='+(10+(options.minReserve ?? 0))))run("buy('supply');modalClose()");
     const boughtFood = run('S.provisions')>foodBefore;
     townSpend=revived*60+(healed?25:0)+(boughtFood?10:0);
     assert.equal(run('S.gold'),town.gold+town.junk*3-townSpend,label+' exact recovery and supply costs');
@@ -112,6 +112,7 @@ function attempt(race, seed, prepared) {
     actions:result.actions,naturallyDead:result.dead,heroAlive,victory,revived,healed,
     unaffordableDead,townSpend,day15,final:JSON.parse(run('JSON.stringify({day:S.day,gold:S.gold,food:S.provisions,hunger:S.hunger,living:S.units.filter(u=>u.hp>0).length,ended:S.ended})'))};
 }
+if (require.main === module) {
 for(const race of [0,1,2,3]) {
   for(const seed of seeds) {
     const weak=attempt(race,seed,false),full=attempt(race,seed,true);
@@ -141,3 +142,6 @@ console.log('GAME-001 paired summary',JSON.stringify({
   method:'same generated map/patrol/enemy seed; Node VM mocked DOM; no real browser; tactical policy fixed; observational only'
 }));
 console.log('PASS 24 paired readiness models; interpret differences as model outcomes, not player enjoyment.');
+
+}
+module.exports = { attempt };
