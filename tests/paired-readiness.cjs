@@ -81,7 +81,7 @@ function attempt(race, seed, prepared) {
   const result = battle(h,run,label);
   const heroAlive = run('S.hero.hp>0 && !S.ended');
   const victory = run('S.victories') > before.victories;
-  let revived = 0, healed = false, unaffordableDead = 0, cost = 0, day15 = false;
+  let revived = 0, healed = false, unaffordableDead = 0, townSpend = 0, day15 = false;
   if(heroAlive) {
     assert(victory,label+' surviving hero won');
     for(const i of outward.slice(0,-1).reverse().concat(0))step(run,i,label+' homeward');
@@ -101,8 +101,8 @@ function attempt(race, seed, prepared) {
     const foodBefore = run('S.provisions');
     if(foodBefore<24&&run('S.gold>=10'))run("buy('supply');modalClose()");
     const boughtFood = run('S.provisions')>foodBefore;
-    cost=revived*60+(healed?25:0)+(boughtFood?10:0);
-    assert.equal(run('S.gold'),town.gold+town.junk*3-cost,label+' exact recovery and supply costs');
+    townSpend=revived*60+(healed?25:0)+(boughtFood?10:0);
+    assert.equal(run('S.gold'),town.gold+town.junk*3-townSpend,label+' exact recovery and supply costs');
     for(let n=outward.length*2;n<14;n++)step(run,run('S.pos')===0?1:0,label+' later travel');
     run('rest()');settleInterruptions(run);
     assert.equal(run('S.day'),16,label+' completed 15 day transitions');
@@ -110,7 +110,7 @@ function attempt(race, seed, prepared) {
   } else assert(run('Boolean(S.ended)'),label+' defeated hero ends run');
   return {race,seed,prepared,patrol,map:JSON.stringify(world),enemies,before,
     actions:result.actions,naturallyDead:result.dead,heroAlive,victory,revived,healed,
-    unaffordableDead,cost,day15,final:JSON.parse(run('JSON.stringify({day:S.day,gold:S.gold,food:S.provisions,hunger:S.hunger,living:S.units.filter(u=>u.hp>0).length,ended:S.ended})'))};
+    unaffordableDead,townSpend,day15,final:JSON.parse(run('JSON.stringify({day:S.day,gold:S.gold,food:S.provisions,hunger:S.hunger,living:S.units.filter(u=>u.hp>0).length,ended:S.ended})'))};
 }
 for(const race of [0,1,2,3]) {
   for(const seed of seeds) {
@@ -120,9 +120,9 @@ for(const race of [0,1,2,3]) {
     assert.deepEqual(weak.enemies,full.enemies,'paired same generated threat');
     rows.push({race,seed,patrol:weak.patrol,enemies:weak.enemies.map(e=>e.id),
       weak:{heroAlive:weak.heroAlive,fallen:weak.naturallyDead,revived:weak.revived,
-        cost:weak.cost,gold:weak.final.gold,food:weak.final.food,living:weak.final.living,day15:weak.day15},
+        townSpend:weak.townSpend,gold:weak.final.gold,food:weak.final.food,living:weak.final.living,unaffordableDead:weak.unaffordableDead,day15:weak.day15},
       full:{heroAlive:full.heroAlive,fallen:full.naturallyDead,revived:full.revived,
-        cost:full.cost,gold:full.final.gold,food:full.final.food,living:full.final.living,day15:full.day15}});
+        townSpend:full.townSpend,gold:full.final.gold,food:full.final.food,living:full.final.living,unaffordableDead:full.unaffordableDead,day15:full.day15}});
   }
 }
 assert.equal(rows.length,24,'all 24 paired difficult encounters represented');
@@ -133,7 +133,8 @@ const tally=policy=>({
   naturalLossScenarios:rows.filter(x=>x[policy].fallen>0).length,
   revivalScenarios:rows.filter(x=>x[policy].revived>0).length,
   completed15Days:rows.filter(x=>x[policy].day15).length,
-  recoveryCost:rows.reduce((sum,x)=>sum+x[policy].cost,0)
+  settlementSpendIncludingSupplies:rows.reduce((sum,x)=>sum+x[policy].townSpend,0),
+  survivingHeroesUnableToReviveAll:rows.filter(x=>x[policy].heroAlive&&x[policy].unaffordableDead>0).length
 });
 console.log('GAME-001 paired summary',JSON.stringify({
   races:4,seedsPerRace:6,pairedBattles:24,weak:tally('weak'),full:tally('full'),
