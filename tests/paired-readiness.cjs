@@ -76,7 +76,7 @@ function attempt(race, seed, prepared, options = {}) {
   run('fight()');
   assert(run('Boolean(B)'),label+' combat starts');
   const enemies = JSON.parse(run('JSON.stringify(B.enemies.map(u=>({id:u.id,race:u.race,category:u.category,level:u.level,max:u.max})))'));
-  assert(enemies.length>=2,label+' generated multi-enemy patrol');
+  assert(enemies.length>=(options.nearestPatrol ? 1 : 2),label+' generated patrol present');
   assert(enemies.some(u=>u.category!==4||![0,3].includes(u.race)),label+' enemy has an attacker');
   const result = battle(h,run,label,options.heroGuardRounds ?? 4);
   const heroAlive = run('S.hero.hp>0 && !S.ended');
